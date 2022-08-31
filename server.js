@@ -142,7 +142,7 @@ app.put('/markUnComplete', async (request, response) => {
 		// documents by object ID in ascending order. If no document was found, do
 		// not insert a new one.
 		await db.collection('todos').updateOne({thing: request.body.itemFromJS},{
-			// If a document was found, set it's completed field to true.
+			// If a document was found, set it's completed field to false.
 			$set: {
 				completed: false
 			}
